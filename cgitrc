@@ -1,0 +1,25 @@
+css=/cgit.css
+logo=/cgit.png
+
+root-title=James' Git Server
+root-desc=a shiny cgit deployed in Docker
+
+enable-http-clone=1
+enable-commit-graph=1
+enable-index-links=1
+
+clone-url=http://localhost:8080/cgit.cgi/$CGIT_REPO_URL
+
+# Highlight source code with python pygments-based highlighter
+source-filter=/usr/local/lib/cgit/filters/syntax-highlighting.py
+
+# Format markdown, restructuredtext, manpages, text files, and html files
+# through the right converters
+about-filter=/usr/local/lib/cgit/filters/about-formatting.sh
+
+readme=:README.md
+readme=:README
+readme=:README.txt
+
+snapshots=zip tar.xz tar.gz tar.zst
+include=/repos/cgitrepos
