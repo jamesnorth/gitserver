@@ -47,6 +47,7 @@ LABEL org.opencontainers.image.authors="James North"
 
 COPY --from=builder /var/www/htdocs/cgit /usr/local/apache2/htdocs/
 COPY --from=builder /usr/local/lib/cgit /usr/local/lib/cgit
+COPY --from=builder /var/www/htdocs/cgit/cgit.cgi /usr/local/lib/cgit/cgit.cgi
 
 RUN set -x -e; \
     apt-get update; \
