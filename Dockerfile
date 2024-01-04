@@ -64,6 +64,12 @@ RUN set -x -e; \
 
 VOLUME /repos
 
+# create a place for cgit to store cached HTML
+RUN set -x -e; \
+    mkdir -pv /var/cache/cgit; \
+    chown -R www-data:www-data /var/cache/cgit
+VOLUME /var/cache/cgit
+
 COPY ./my-httpd.conf /usr/local/apache2/conf/httpd.conf
 
 COPY ./cgitrc /etc/cgitrc

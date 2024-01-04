@@ -21,5 +21,7 @@ readme=:README.md
 readme=:README
 readme=:README.txt
 
+cache-size=1000
+
 snapshots=zip tar.xz tar.gz tar.zst
 include=/repos/cgitrepos
